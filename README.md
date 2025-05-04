@@ -29,6 +29,24 @@
 *  Testing dataset: [MEF, LIME, NPE, DICM](https://drive.google.com/file/d/1YHQ1eW_2WAFSH9vcSY0b933Nzkjpa_tC/view?usp=drive_link)
 *  Low-light object detection: [ExDark](https://github.com/cs-chan/Exclusively-Dark-Image-Dataset)
 
+# Usage
 
+## Train 
+
+- Change the path to dataset in options/train/xxx.yaml (e.g., LOLv1.yaml, LOLv2_real.yml, LOLv2_synthetic.yml).
+- Change the path to vgg19 in options/train/xxx.yaml (e.g., LOLv1.yaml, LOLv2_real.yml, LOLv2_synthetic.yml).
+
+```
+python train.py -opt options/train/xxx.yml
+```
+
+## Test 
+
+- Change the path to dataset in options/test/xxx.yaml (e.g., LOLv1.yaml, LOLv2_real.yml, LOLv2_synthetic.yml).
+- Change the path to pre-trained model in options/test/xxx.yaml (e.g., LOLv1.yaml, LOLv2_real.yml, LOLv2_synthetic.yml).
+
+```
+python test.py -opt options/test/xxx.yml
+```
 
 **Acknowledgment:** This code is based on the [Restormer](https://github.com/swz30/Restormer) and the [SNR-Aware](https://github.com/dvlab-research/SNR-Aware-Low-Light-Enhance).
